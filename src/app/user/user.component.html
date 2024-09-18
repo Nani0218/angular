@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <h1 class="heading">User Deatils</h1>
+    <form #userForm="ngForm" >
+   
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" 
+        [(ngModel)]="userDetails.name"
+        [appMask]="userDetails.name"
+        required>
+      
+      </div>
+      
+      <div class="form-group">
+        <label for="email">email</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userDetails.email" required email>
+     
+      </div>
+  
+      <div class="form-group">
+
+      <app-address></app-address>
+      </div>
+  
+      <div class="form-group">
+        <label for="mobile">mobile</label>
+        <input type="tel" class="form-control" id="mobile" name="mobile" [(ngModel)]="userDetails.mobile" required pattern="[0-9]{10}">
+       
+      </div>
+  
+      <div class="form-group">
+        <label for="age">age</label>
+        <input type="number" class="form-control" id="age" name="age" [(ngModel)]="userDetails.age" required min="20" max="60">
+       
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">gender</label>
+        <select class="form-control" id="gender" name="gender" [(ngModel)]="userDetails.gender" required>
+          <option value="" disabled>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      
+      </div>
+
+      <button type="submit" class="btn btn-primary">registerUser</button>
+      <button type="submit" class="btn btn-primary">forgetpassword</button>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a  class="nav-link active " aria-current="page" router-link="/adhar" routerLinkActive="active"> adharcard</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link active" aria-current="page" router-link="/voteridcard" routerLinkActive="active"> voteridcard</a>
+          </li>
+    
+      </ul>
+
+    </form>
+  </div>
+  

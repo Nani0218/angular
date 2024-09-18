@@ -1,0 +1,19 @@
+
+<div class="container-fuild">
+    <div class="form-group">
+        <label for="addingrestaurant" >Restaurant Name</label>
+        <input type="text" name="addingrestaurant" id="addingrestaurant"
+        [(ngModel)]="restaurant.name"/>
+    </div>
+   
+    <app-rating></app-rating>
+ 
+
+    <button oneclick="welcome" type="submit" class="btn btn-primary" routerLink="addRestaurant"> Add Restaurant</button>
+
+    {{restaurant.name}}
+
+     
+
+    <app-address></app-address>
+</div>
